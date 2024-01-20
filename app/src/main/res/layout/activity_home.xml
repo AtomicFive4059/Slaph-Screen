@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_home_scene"
+    tools:context=".HomeActivity">
+
+    <!-- Background  ImageView with drawable resource and constraints layout -->
+
+    <!-- AppIcon ImageView with drawable resource and constraints layout -->
+
+    <ImageView
+        android:id="@+id/icon_background"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/green"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/app_icon"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/app_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/icon_background"
+        app:layout_constraintEnd_toEndOf="@+id/icon_background"
+        app:layout_constraintStart_toStartOf="@+id/icon_background"
+        app:layout_constraintTop_toTopOf="@+id/icon_background" />
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.SplashScreenYT" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Customize your light theme here. -->
+
+        <!-- <item name="colorPrimary">@color/appBackgroundColor</item>  -->
+        <!-- for changing the theme color and we defined that color in color resource by id of aapBackground -->
+
+        <item name="android:windowFullscreen">true</item>
+        <!-- to removed the theme from screen! -->
+    </style>
+
+    <style name="Theme.SplashScreenYT" parent="Base.Theme.SplashScreenYT" />
+
+</resources>

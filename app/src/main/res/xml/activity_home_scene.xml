@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:motion="http://schemas.android.com/apk/res-auto">
+
+    <Transition
+        motion:constraintSetEnd="@+id/end"
+        motion:constraintSetStart="@id/start"
+        motion:autoTransition="animateToEnd"
+        motion:motionInterpolator="cubic(0.2,0.21,0.61,0.59)">   <!-- defining autoTraction -->
+        motion:duration="3000"
+        motion:motionInterpolator="cubic(0.43,0.59,0.8,0.8)">
+       <KeyFrameSet>
+           <KeyAttribute
+               motion:motionTarget="@+id/icon_background"
+               motion:framePosition="100"
+               android:scaleX="4" />
+           <KeyAttribute
+               motion:motionTarget="@+id/icon_background"
+               motion:framePosition="100"
+               android:scaleY="10" />
+       </KeyFrameSet>
+    </Transition>
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            motion:layout_constraintLeft_toLeftOf="parent"
+            motion:layout_constraintRight_toRightOf="parent"
+            motion:layout_constraintTop_toTopOf="parent" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            motion:layout_constraintVertical_bias="0.533"
+            android:layout_height="150dp"
+            motion:layout_constraintStart_toStartOf="@+id/icon_background"
+            motion:layout_constraintTop_toTopOf="@+id/icon_background"
+            motion:layout_constraintBottom_toBottomOf="@+id/icon_background"
+            motion:layout_constraintHorizontal_bias="0.533"
+            motion:layout_constraintEnd_toEndOf="@+id/icon_background"
+            android:layout_width="150dp"
+            android:id="@+id/app_icon" />
+    </ConstraintSet>
+</MotionScene>
